@@ -1,0 +1,324 @@
+/* Main Content Layout */
+.body-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  margin: 0 auto; /* Center the entire layout */
+  max-width: 1400px; /* Add a maximum width for better margins */
+}
+
+/* Top Section: Carousel and Side Images */
+.top-section {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 20px;
+  align-items: stretch; /* Ensure both carousel and side images have the same height */
+}
+
+/* Carousel Section */
+.carousel {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 100%; /* Ensure consistent height */
+}
+
+.carousel-wrapper {
+  display: flex; /* Place all images side by side */
+  transition: transform 0.5s ease-in-out; /* Smooth sliding animation */
+}
+
+.carousel-wrapper.swipe-left {
+  transform: translateX(-100%); /* Swipe left animation */
+}
+
+.carousel-wrapper.swipe-right {
+  transform: translateX(100%); /* Swipe right animation */
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the entire carousel area */
+  flex-shrink: 0; /* Prevent images from shrinking */
+  border-radius: 10px;
+}
+
+/* Carousel Indicators */
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.carousel-circle {
+  width: 12px;
+  height: 12px;
+  border: 2px solid white;
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-circle.active {
+  background-color: white;
+}
+
+/* Side Images Section */
+.side-images {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.side-image {
+  width: 140%;
+  height: 120%;
+  object-fit: contain; /* Ensure the side images cover their containers */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Info Section */
+.info-section {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px 0;
+  gap: 20px;
+}
+
+.info-item {
+  flex: 1;
+  display: flex; /* Use flexbox for horizontal alignment */
+  align-items: center; /* Align icon and text vertically */
+  gap: 15px; /* Add space between the icon and text */
+  text-align: left; /* Align text to the left */
+}
+
+.info-icon {
+  font-size: 50px; /* Larger icon size */
+  color: #000000; /* Consistent blue color */
+  transition: transform 0.3s ease; /* Smooth reverse animation */
+}
+
+.info-item:hover .info-icon {
+  transform: scaleX(-1); /* Flip horizontally on hover */
+}
+
+.info-text {
+  display: flex;
+  flex-direction: column; /* Stack title and description vertically */
+}
+
+.info-text h4 {
+  font-size: 18px; /* Slightly larger font size for the title */
+  font-weight: bold;
+  margin: 0;
+  color: #333; /* Darker text color for better readability */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.info-item:hover h4 {
+  color: #0056d2; /* Change title text to blue on hover */
+}
+
+.info-text p {
+  font-size: 14px;
+  color: #555; /* Subtle gray for the description */
+  margin: 5px 0 0;
+  line-height: 1.5; /* Better line spacing */
+}
+.categories-section {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.categories-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #ff7f00; /* Orange color for the title */
+  margin-bottom: 20px;
+}
+
+.categories-navbar {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.category-item {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.category-item:hover {
+  background-color: #0056d2; /* Blue background on hover */
+  color: white; /* White text on hover */
+
+}
+
+.category-item.active {
+  background-color: #0056d2; /* Blue background for active category */
+  color: white;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 items per row */
+  gap: 20px;
+}
+
+.product-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 15px;
+  text-align: center;
+  position: relative;
+}
+
+.product-image-container {
+  position: relative;
+  width: 100%;
+  height: 250px; /* Adjust height for larger images */
+  overflow: hidden;
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.product-hover-buttons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  gap: 10px;
+}
+
+.product-card:hover .product-hover-buttons {
+  display: flex;
+}
+
+.product-card:hover .product-image {
+  opacity: 0.3; /* Grey out effect */
+}
+
+.hover-button {
+  background-color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.product-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin: 10px 0;
+}
+
+.product-stars {
+  color: #ccc; /* Grey color for empty stars */
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.product-price {
+  font-size: 24px;
+  font-weight: bold;
+  color: #0056d2; /* Dark blue for price */
+}
+.product-button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: bold;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.product-button:hover {
+  background-color: #218838;
+}
+.product-heart {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  color: #000000; /* Grey color for the heart */
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+/* Big Images Section */
+.big-images-section {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2 equal flexible columns */
+  gap: 40px; /* Bigger gap */
+  margin-top: 40px;
+  width: 100%;
+  padding: 0 40px; /* Optional: add some side padding */
+}
+
+.big-image-container {
+  width: 98%; /* Relative width */
+  max-width: 1200px; /* Optional: limit maximum size */
+  height: 600px; /* Adjust height */
+  position: relati  ve;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.big-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the container */
+  transition: transform 0.3s ease;
+}
+.mid-images-section {
+  display: flex;
+  justify-content: center;
+  gap: 40px; /* Space between images */
+  margin: 20px 0; /* Add some vertical spacing */
+}
+
+.mid-image {
+  width: 600px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: shadow effect */
+}
+
+.new-products-section {
+  margin-top: 40px;
+}
+
+.new-products-section .categories-title {
+  color: #ff7f00; /* Orange color for the title */
+  text-align: center;
+  margin-bottom: 20px;
+}
