@@ -16,6 +16,112 @@ const carouselImages = [
   require("../../images/carousel6.png"),
   require("../../images/carousel7.png"),
 ];
+const newProducts = {
+  "Nouveaux Produits2": [
+    {
+      id: 1,
+      image: require("../../images/product1.png"),
+      title: "Pc Portable Asus Vivobook N7400 Pro",
+      price: "3,359,000 TND",
+    },
+    {
+      id: 2,
+      image: require("../../images/product1.png"),
+      title: "Pc Portable Asus X515EP",
+      price: "2,299,000 TND",
+    },
+    {
+      id: 3,
+      image: require("../../images/product1.png"),
+      title: "Pc Portable Lenovo Flex 5",
+      price: "3,075,000 TND",
+    },
+    {
+      id: 4,
+      image: require("../../images/product1.png"),
+      title: "PC Portable Gamer MSI Katana GF66",
+      price: "3,499,000 TND",
+    },
+  ],
+  "PC Gamer": [
+    {
+      id: 1,
+      image: require("../../images/gamerpc.png"),
+      title: "Pc Gamer CS 2 (Recommended), I3-13ème, RTX 3050 VENTUS 2X, 16Go, 512G SSD",
+      price: "1,869,000 TND",
+    },
+    {
+      id: 2,
+      image: require("../../images/gamerpc.png"),
+      title: "Pc Gamer FIFA FC 24 (ULTRA), I7-12ème, RTX 3060 VENTUS 2X, 16Go, 500Go SSD",
+      price: "2,959,000 TND",
+    },
+    {
+      id: 3,
+      image: require("../../images/gamerpc.png"),
+      title: "Pc Modélisation 3D Recommended Performance, Ryzen7, RTX 4060Ti, 32Go, 1To HDD + 512Go SSD",
+      price: "3,259,000 TND",
+    },
+    {
+      id: 4,
+      image: require("../../images/gamerpc.png"),
+      title: "Pc De Bureau AMD Ryzen 5-5600G, 16Go, 256Go SSD",
+      price: "949,000 TND",
+    },
+  ],
+  "MacBooks": [
+    {
+      id: 5,
+      image: require("../../images/macbook.png"),
+      title: "MacBook Pro 14\" M1 Pro, 16Go RAM, 512Go SSD",
+      price: "7,999,000 TND",
+    },
+    {
+      id: 6,
+      image: require("../../images/macbook.png"),
+      title: "MacBook Air 13\" M1, 8Go RAM, 256Go SSD",
+      price: "4,999,000 TND",
+    },
+    {
+      id: 7,
+      image: require("../../images/macbook.png"),
+      title: "MacBook Pro 16\" M1 Max, 32Go RAM, 1To SSD",
+      price: "12,999,000 TND",
+    },
+    {
+      id: 8,
+      image: require("../../images/macbook.png"),
+      title: "MacBook Air 15\" M2, 16Go RAM, 512Go SSD",
+      price: "6,499,000 TND",
+    },
+  ],
+  "Moniteurs": [
+    {
+      id: 9,
+      image: require("../../images/monitor.png"),
+      title: "Ecran Dell E2016HV - LED 19.5\" HD+",
+      price: "325,000 TND",
+    },
+    {
+      id: 10,
+      image: require("../../images/monitor.png"),
+      title: "Ecran Gaming Dell SE2422H 24\" FHD 75Hz",
+      price: "379,000 TND",
+    },
+    {
+      id: 11,
+      image: require("../../images/monitor.png"),
+      title: "Ecran HP M27fw 27\" FHD 75Hz",
+      price: "599,000 TND",
+    },
+    {
+      id: 12,
+      image: require("../../images/monitor.png"),
+      title: "Ecran Gamer MSI Optix MAG241CVSFR 24\" FHD, 1ms, 144Hz",
+      price: "679,000 TND",
+    },
+  ],
+};
 const featuredProducts = {
   "Produits en vedette": [
     {
@@ -167,110 +273,7 @@ const featuredProducts = {
       price: "6,499,000 TND",
     },
   ],
-  "Nouveaux Produits2": [
-    {
-      id: 1,
-      image: require("../../images/product1.png"),
-      title: "Pc Portable Asus Vivobook N7400 Pro",
-      price: "3,359,000 TND",
-    },
-    {
-      id: 2,
-      image: require("../../images/product1.png"),
-      title: "Pc Portable Asus X515EP",
-      price: "2,299,000 TND",
-    },
-    {
-      id: 3,
-      image: require("../../images/product1.png"),
-      title: "Pc Portable Lenovo Flex 5",
-      price: "3,075,000 TND",
-    },
-    {
-      id: 4,
-      image: require("../../images/product1.png"),
-      title: "PC Portable Gamer MSI Katana GF66",
-      price: "3,499,000 TND",
-    },
-  ],
-  "PC Gamer": [
-    {
-      id: 1,
-      image: require("../../images/gamerpc.png"),
-      title: "Pc Gamer CS 2 (Recommended), I3-13ème, RTX 3050 VENTUS 2X, 16Go, 512G SSD",
-      price: "1,869,000 TND",
-    },
-    {
-      id: 2,
-      image: require("../../images/gamerpc.png"),
-      title: "Pc Gamer FIFA FC 24 (ULTRA), I7-12ème, RTX 3060 VENTUS 2X, 16Go, 500Go SSD",
-      price: "2,959,000 TND",
-    },
-    {
-      id: 3,
-      image: require("../../images/gamerpc.png"),
-      title: "Pc Modélisation 3D Recommended Performance, Ryzen7, RTX 4060Ti, 32Go, 1To HDD + 512Go SSD",
-      price: "3,259,000 TND",
-    },
-    {
-      id: 4,
-      image: require("../../images/gamerpc.png"),
-      title: "Pc De Bureau AMD Ryzen 5-5600G, 16Go, 256Go SSD",
-      price: "949,000 TND",
-    },
-  ],
-  "MacBooks": [
-    {
-      id: 5,
-      image: require("../../images/macbook.png"),
-      title: "MacBook Pro 14\" M1 Pro, 16Go RAM, 512Go SSD",
-      price: "7,999,000 TND",
-    },
-    {
-      id: 6,
-      image: require("../../images/macbook.png"),
-      title: "MacBook Air 13\" M1, 8Go RAM, 256Go SSD",
-      price: "4,999,000 TND",
-    },
-    {
-      id: 7,
-      image: require("../../images/macbook.png"),
-      title: "MacBook Pro 16\" M1 Max, 32Go RAM, 1To SSD",
-      price: "12,999,000 TND",
-    },
-    {
-      id: 8,
-      image: require("../../images/macbook.png"),
-      title: "MacBook Air 15\" M2, 16Go RAM, 512Go SSD",
-      price: "6,499,000 TND",
-    },
-  ],
-  "Moniteurs": [
-    {
-      id: 9,
-      image: require("../../images/monitor.png"),
-      title: "Ecran Dell E2016HV - LED 19.5\" HD+",
-      price: "325,000 TND",
-    },
-    {
-      id: 10,
-      image: require("../../images/monitor.png"),
-      title: "Ecran Gaming Dell SE2422H 24\" FHD 75Hz",
-      price: "379,000 TND",
-    },
-    {
-      id: 11,
-      image: require("../../images/monitor.png"),
-      title: "Ecran HP M27fw 27\" FHD 75Hz",
-      price: "599,000 TND",
-    },
-    {
-      id: 12,
-      image: require("../../images/monitor.png"),
-      title: "Ecran Gamer MSI Optix MAG241CVSFR 24\" FHD, 1ms, 144Hz",
-      price: "679,000 TND",
-    },
-  ],
+  
 };
 const allProducts = {
   "PC PORTABLES": [
@@ -608,7 +611,7 @@ const Body = () => {
 <div className="new-products-section">
   <h2 className="categories-title">NOUVEAUX PRODUITS</h2>
   <div className="products-grid">
-    {featuredProducts["Nouveaux Produits2"].map((product) => (
+    {newProducts["Nouveaux Produits2"].map((product) => (
       <div key={product.id} className="product-card">
         <div className="product-heart">
           <CiHeart />
@@ -632,10 +635,11 @@ const Body = () => {
     ))}
   </div>
 </div>
+
 <div className="new-products-section">
   <h2 className="categories-title">PC GAMER</h2>
   <div className="products-grid">
-    {featuredProducts["PC Gamer"].map((product) => (
+    {newProducts["PC Gamer"].map((product) => (
       <div key={product.id} className="product-card">
         <div className="product-heart">
           <CiHeart />
@@ -663,7 +667,7 @@ const Body = () => {
 <div className="new-products-section">
   <h2 className="categories-title">MACBOOKS</h2>
   <div className="products-grid">
-    {featuredProducts["MacBooks"].map((product) => (
+    {newProducts["MacBooks"].map((product) => (
       <div key={product.id} className="product-card">
         <div className="product-heart">
           <CiHeart />
@@ -691,7 +695,7 @@ const Body = () => {
 <div className="new-products-section">
   <h2 className="categories-title">MONITEURS</h2>
   <div className="products-grid">
-    {featuredProducts["Moniteurs"].map((product) => (
+    {newProducts["Moniteurs"].map((product) => (
       <div key={product.id} className="product-card">
         <div className="product-heart">
           <CiHeart />
